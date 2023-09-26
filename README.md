@@ -1,1 +1,3 @@
-# Practica2-listicle
+# Practica 2: Listicle
+
+Contrucción de la pagina listicle.html.
