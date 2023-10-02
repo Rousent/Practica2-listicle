@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/*
+    Sourse Sans Pro es ahora Source Sans 3
+*/
+
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+}
+
 body {
     margin: 0px;
 }
@@ -14,6 +30,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../public/header.jpg');
+    background-attachment: fixed;
 }
 
 h1 {
@@ -23,6 +40,7 @@ h1 {
     text-align: center;
     max-width: 780px;
     height: fit-content;
+    animation: zoom-in-zoom-out 1s;
 }
 
 main {
@@ -31,11 +49,15 @@ main {
 }
 
 section {
-    width: fit-content;
     position: relative;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: auto auto 120px auto;
+    width: 66.67vw;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(51, 51, 51);
 }
 
 h2 {
@@ -59,18 +81,12 @@ a:hover {
     text-decoration: underline;
 }
 
-figure {
+img {
     position: relative;
     left: 0;
     right: 0;
     margin: 20px auto auto auto;
-    width: fit-content;
-}
-
-figcaption {
-    text-align: center;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.65);
+    width: 100%;
 }
 
 .profile {
@@ -94,6 +110,7 @@ figcaption {
 }
 
 .profile-picture {
+    margin: 0;
     width: 100px;
     height: 100px;
     border-style: solid;
@@ -103,18 +120,9 @@ figcaption {
 }
 
 .number {
-    position: fixed;
-    transform: translate(-80px, -8px);
+    position: absolute;
+    transform: translateX(-80px);
     font-family: 'Roboto Slab', serif;
     font-size: 36px;
-    font-weight: bold;
     color: rgba(0, 0, 0, 0.25);
-}
-
-.content {
-    width: 66.67vw;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 18px;
-    line-height: 32px;
-    color: rgb(51, 51, 51);
 }
